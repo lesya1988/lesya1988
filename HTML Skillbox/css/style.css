@@ -1,0 +1,438 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: var(--white);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+      url("../fonts/RobotoBold.woff2") format("woff"),
+      url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"),
+      url("../fonts/RobotoRegular.woff2") format("woff"),
+      url("../fonts/Roboto-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+      url("../fonts/RobotoMedium.woff2") format("woff"),
+      url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --body: #E5E5E5;
+  --header: #3F2AFF;
+  --white: #FFFFFF;
+  --hero: #212133;
+  --btn: #3F2AFF;
+  --black:#2E2B44;
+  --descr: #666666;
+  --teachers: #212133;
+  --teachers-descr: #85859B;
+}
+
+/*:root {
+  --container-max-width: 1440px;
+  --container-padding: 165px;
+  --columns: 12;
+  --gutter: 30;
+}*/
+
+/* glob */
+.list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-offset {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+}
+
+
+/*header*/
+.header {
+  background: var(--header);
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+
+.header__content {
+  align-items: center;
+}
+
+.header__icon {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.nav__list {
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--white);
+}
+
+.burger {
+  display: none;
+}
+
+
+/*hero*/
+.hero {
+  background: var(--hero);
+  padding-top: 15px;
+  padding-bottom: 8px;
+  margin-bottom: 80px;
+}
+
+.hero__left {
+  padding-top: 90px;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 50px;
+  color: var(--white);
+}
+
+.hero__descr {
+  margin-bottom: 65px;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--white);
+}
+
+.hero__btn {
+
+  outline: none;
+  pointer-events: auto;
+  min-width: 270px;
+  padding: 24px 75.5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--btn);
+  border-radius: 20px;
+}
+
+/*about*/
+.about {
+  margin-bottom: 75px;
+}
+
+.about__img {
+  padding-top: 25px;
+}
+
+.about__title {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--black);
+}
+
+.about__descr {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--descr);
+}
+
+.about__info-descr {
+  padding-left: 30px;
+  padding-top: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--descr);
+}
+
+.about__info {
+  display: flex;
+  padding-top: 5px;
+}
+
+.about__svg {
+  max-width: 80px;
+  width: 100%;
+}
+
+
+/*teachers*/
+.teachers {
+  background: var(--teachers);
+  padding-top: 80px;
+  padding-bottom: 70px;
+  margin-bottom: 75px;
+}
+
+.teachers__title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--white);
+}
+
+.teachers__item-name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--white);
+}
+
+.teachers__item-descr {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--teachers-descr);
+}
+
+.teachers__item-image {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+/*courses*/
+.courses {
+  margin-bottom: 85px;
+}
+
+.courses__list {
+  margin-bottom: 30px;
+}
+
+.courses__item {
+  margin-bottom: 30px;
+}
+
+.courses__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--teachers);
+}
+
+.card__item {
+  font-size: 0;
+}
+
+.card__list {
+  border-radius: 20px;
+  /*  Чтобы ссылка всегда была прижата к нижнему краю карточке при любой ее высоте, используем flex  */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+   /*  Раскомментируйте минимальную высоту, чтобы проверить, что при любой высоте ссылка прижата к нижнему краю карточки  */
+/*   min-height: 500px; */
+}
+
+.card__item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card__item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card__content {
+  padding: 30px;
+  background-color: #EDF0F9;
+  /*  Чтобы ссылка всегда была прижата к нижнему краю карточке при любой ее высоте, используем flex  */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card__item {
+  position: relative;
+}
+
+.clock {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  color: var(--white);
+  background-image: url(../img/clock.png);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  padding-top: 2px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--teachers);
+}
+
+.card__text {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--descr);
+}
+
+.card__link {
+  /*  Авто отступ вверху, чтобы ссылка всегда была прижата к нижнему краю карточки  */
+  border: none;
+  margin-top: auto;
+  width: 202px;
+  outline: none;
+  pointer-events: auto;
+  padding: 21px 59px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--btn);
+  border-radius: 20px;
+}
+
+.card:nth-child(1) {
+  margin-bottom: 30px;
+}
+
+.card:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+
+/*footer*/
+.footer__top {
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #2E2B44;
+}
+
+.footer__social-item:not(:nth-child(4n)) {
+  margin-right: 34.78px
+}
+
+.footer__social-link {
+  display: flex;
+  width: 18px;
+  height: 18px;
+}
+
+.footer__bottom {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.footer__copy {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
