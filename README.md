@@ -13,9 +13,9 @@
 - 💬 Ask me what I know and can do
 
 - 📫 How to reach me:
-  mail - 6640161a@gmail.com
-  telegram - @alesya_webtest
-  LinkedIn - https://linkedin.com/in/алеся-канопляник-561614297
+mail - 6640161a@gmail.com
+telegram - @alesya_webtest
+LinkedIn - https://linkedin.com/in/алеся-канопляник-561614297
 
 - ⚡ Fun fact: “The task of a testing specialist is to identify all the problems that may arise when working with a product and do everything possible to improve its quality.”  
 (Sam Kaner, Software Testing)
